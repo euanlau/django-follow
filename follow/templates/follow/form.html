@@ -1,4 +1,5 @@
 {% load follow_tags %}
+
 <form action="{% follow_url object %}" method="post">
 	{% csrf_token %}
 	{% if request.user|is_following:object %}
